@@ -1,14 +1,54 @@
 import ical from 'ical.js';
 
 function fixIcalFile(icsContent) {
-  const allowedProps = 'BEGIN END VERSION PRODID X-WR-CALNAME X-APPLE-CALENDAR-COLOR CREATED DTEND DTSTAMP DTSTART LAST-MODIFIED LOCATION SEQUENCE SUMMARY UID URL X-APPLE-STRUCTURED-LOCATION DESCRIPTION EXDATE RRULE X-APPLE-CREATOR-IDENTITY X-APPLE-CREATOR-TEAM-IDENTITY X-APPLE-MAPKIT-HANDLE TZNAME TZOFFSETFROM TZOFFSETTO RDATE X-LIC-LOCATION ATTENDEE ORGANIZER STATUS'.split(' ')
 
-  // lines must start with a whitespace or with one of the allowed property names
-  const lines = icsContent.split('\n')
-    .filter(line => line.startsWith(' ') || allowedProps.some(prop => line.startsWith(prop)))
-    .join('\n')
+  // START remove X-APPLE-STRUCTURED-LOCATION
+  const veventProps = [
+    'BEGIN:',
 
-  return lines
+    'CLASS',
+    'CREATED',
+    'DESCRIPTION',
+    'DTSTART',
+    'GEO',
+    'LAST-MOD',
+    'LOCATION',
+    'ORGANIZER',
+    'PRIORITY',
+    'DTSTAMP',
+    'SEQ',
+    'STATUS',
+    'SUMMARY',
+    'TRANSP',
+    'UID',
+    'URL',
+    'RECURID',
+    'DTEND',
+    'DURATION',
+
+    'ATTACH',
+    'ATTENDEE',
+    'CATEGORIES',
+    'COMMENT',
+
+    'CONTACT',
+    'EXDATE',
+    'EXRULE',
+    'RSTATUS',
+    'RELATED',
+
+    'RESOURCES',
+    'RDATE',
+    'RRULE',
+    'X-.*',
+    'END:'
+  ];
+
+  const regex = new RegExp('X-APPLE-STRUCTURED-LOCATION;.+?(?=^' + veventProps.join('|^') + ')', 'smg');
+  icsContent = icsContent.replaceAll(regex, '');
+  // END remove X-APPLE-STRUCTURED-LOCATION
+
+  return icsContent;
 }
 
 export function getEventsInRange(icsContent, startDate, endDate) {
