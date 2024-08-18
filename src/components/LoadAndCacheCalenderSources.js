@@ -19,11 +19,13 @@ export function LoadAndCacheCalenderSources() {
       const icalData = await loadUrlContentFromCache(calendarSourceUrlsRef.current);
 
       // recalc the day data
+
       const now = new Date();
-      const nextWeek = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7);
+      const start = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 32);
+      const end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 32);
       await calcDailyDotSummariesForRange({
-        rangeStart: now,
-        rangeEnd: nextWeek,
+        rangeStart: start,
+        rangeEnd: end,
         calendarData: icalData,
         questionTracks,
       })

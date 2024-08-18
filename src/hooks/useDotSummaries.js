@@ -9,17 +9,14 @@ export function useDotSummaries({
   rangeEnd, // iso-date-string or Date
 }) {
   const useLocalStorageData = useMemo(() => createLocalStorageSyncHook({
-    shouldUpdate: ({ key }) => {
-      console.log('key', key);
-      return key.startsWith('dot_')
-    },
+    shouldUpdate: ({ key }) => key.startsWith('dot_'),
     loadData: () => {
       const allDaysInRange = getAllDaysInRange(new Date(rangeStart), new Date(rangeEnd));
 
       const dotSummaries = allDaysInRange
         .map((dayRange) => {
           try {
-            const localStorageKey = getDotKey(dayRange.rangeStart, dayRange.rangeEnd);
+            const localStorageKey = getDotKey(new Date(dayRange.rangeStart), new Date(dayRange.rangeEnd));
             return loadFromLocalStorage(localStorageKey);
           } catch (error) {
             console.error('Error loading dot from localStorage', error);

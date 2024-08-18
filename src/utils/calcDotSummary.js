@@ -13,16 +13,16 @@ export function dateToDayEnd(date) {
 }
 
 export function getDotKey(rangeStart, rangeEnd) {
-  return `dot_${rangeStart.toISOString()}_${rangeEnd.toISOString()}`;
+  return `dot_${new Date(rangeStart).toISOString()}_${new Date(rangeEnd).toISOString()}`;
 }
 
 export function getAllDaysInRange(rangeStart, rangeEnd) {
   const allDaysInRange = [];
-  let currentDay = rangeStart;
+  let currentDay = new Date(rangeStart);
   while (currentDay <= rangeEnd) {
     allDaysInRange.push({
-      rangeStart: dateToDayStart(currentDay),
-      rangeEnd: dateToDayEnd(currentDay),
+      rangeStart: dateToDayStart(currentDay).toISOString(),
+      rangeEnd: dateToDayEnd(currentDay).toISOString(),
     });
     currentDay.setDate(currentDay.getDate() + 1);
   }
@@ -47,6 +47,10 @@ export async function calcDailyDotSummariesForRange({
   }
 }
 
+export function getAllEventsInRange(calendarData, rangeStart, rangeEnd) {
+  return calendarData.flatMap((calendarData) => getEventsInRange(calendarData, rangeStart, rangeEnd))
+}
+
 export async function calcDotSummary({
   rangeStart,
   rangeEnd,
@@ -62,10 +66,10 @@ export async function calcDotSummary({
   const localStorageKey = getDotKey(rangeStart, rangeEnd);
 
   // get all events in range
-  const allEventsInRange = calendarData.flatMap((calendarData) => getEventsInRange(calendarData, rangeStart, rangeEnd))
+  const allEventsInRange = getAllEventsInRange(calendarData, rangeStart, rangeEnd)
 
   if (!allEventsInRange || allEventsInRange.length === 0) {
-    console.log('no events in range');
+    // console.error('no events in range');
     return;
   }
 
@@ -80,8 +84,8 @@ export async function calcDotSummary({
 
   // combine allEventsInRange, questionTracks and llmSystemPrompt into one text
   const llmPrompt = llmSystemPrompt
-    .replace('{{rangeStart}}', rangeStart.toISOString())
-    .replace('{{rangeEnd}}', rangeEnd.toISOString())
+    .replace('{{rangeStart}}', new Date(rangeStart).toISOString())
+    .replace('{{rangeEnd}}', new Date(rangeEnd).toISOString())
     .replace('{{eventsInRange}}', allEventsInRange.join('\n'))
     .replace('{{questionTracks}}', combinedQuestionTracks)
 
@@ -111,8 +115,8 @@ export async function calcDotSummary({
   }
 
   const newDotData = {
-    rangeStart: rangeStart.toISOString(),
-    rangeEnd: rangeEnd.toISOString(),
+    rangeStart: new Date(rangeStart).toISOString(),
+    rangeEnd: new Date(rangeEnd).toISOString(),
     hashOfRequest: hashOfLlmPrompt,
     dotSummary: newDotSummary,
   };

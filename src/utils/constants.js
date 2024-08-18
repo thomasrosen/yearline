@@ -24,6 +24,7 @@ Example Output:
   "question1": boolean, // The keys must be the exact question. Do not include "Question: " in the key. The key is used to match the question.
   "question2": "string",
   "question3": number,
+  "question4": null, // if the answer is null, or ans spelling of null/undefined. write is as null. not as a string
 }
 
 ONLY return PURE JSON.

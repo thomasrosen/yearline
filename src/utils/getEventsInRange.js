@@ -51,9 +51,57 @@ function fixIcalFile(icsContent) {
   return icsContent;
 }
 
+function getOccurenceAsOwnEvent(eventComp, occurrenceDate) {
+  // this function clones the event
+  try {
+    const originalEvent = eventComp.component
+
+    // Create a new VEVENT component
+    const newEvent = new ical.Component('vevent');
+
+    // Iterate over all properties of the original event
+    originalEvent.getAllProperties().forEach(function (property) {
+      // Get the property name
+      const propName = property.name;
+
+      // Skip recurrence-related properties
+      if (propName !== 'rrule' && propName !== 'rdate' && propName !== 'exdate') {
+        // Clone the property and add it to the new event
+        // var clonedProperty = property.clone();
+        newEvent.addProperty(property) //clonedProperty);
+      }
+    });
+
+    // Update the dtstart for the specific occurrence
+    newEvent.updatePropertyWithValue('dtstart', occurrenceDate);
+
+    // Calculate the dtend based on the original duration
+    try {
+      // this fails if an event has no end date (maybe full day events?). so we catch this here
+      const duration = eventComp.duration;
+      const dtend = occurrenceDate.clone()
+      dtend.addDuration(duration);
+      newEvent.updatePropertyWithValue('dtend', dtend);
+    } catch (error) {
+      // we don't care if this fails
+    }
+
+    return new ical.Event(newEvent);
+  } catch (error) {
+    // we dont really care if this fails
+  }
+
+  return undefined;
+}
+
 export function getEventsInRange(icsContent, startDate, endDate) {
+  startDate = new Date(startDate);
+  endDate = new Date(endDate);
+
+  const oneYearAgo = new Date();
+  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+
   icsContent = fixIcalFile(icsContent)
-  console.log('icsContent', icsContent)
   // icsContent = icsContent.replaceAll('\n\n', ' '); // remove double newlines
 
   try {
@@ -64,6 +112,7 @@ export function getEventsInRange(icsContent, startDate, endDate) {
     const events = [];
 
     vevents.forEach(event => {
+
       const eventComp = new ical.Event(event);
 
       // Handle recurring events
@@ -73,16 +122,16 @@ export function getEventsInRange(icsContent, startDate, endDate) {
 
         while ((next = iterator.next())) {
           const occurrence = ical.Time.fromJSDate(new Date(next.toJSDate()));
+          const occurrenceDate = occurrence.toJSDate(); // Convert ICAL.Time objects to JavaScript Date objects
 
-          if (occurrence.compare(startDate) >= 0 && occurrence.compare(endDate) <= 0) {
-            throw new Error('Recurring events are not supported yet');
-            // events.push({
-            //   nextAsString: next.toString(),
-            //   eventCompAsString: eventComp.toString(),
-            // });
+          if (occurrenceDate >= startDate && occurrenceDate <= endDate) {
+            const clonedEvent = getOccurenceAsOwnEvent(eventComp, next)
+            if (clonedEvent) {
+              events.push(clonedEvent.toString())
+            }
           }
 
-          if (occurrence.compare(endDate) > 0) {
+          if (occurrenceDate > endDate) {
             break;
           }
         }
@@ -91,9 +140,11 @@ export function getEventsInRange(icsContent, startDate, endDate) {
         const eventEnd = eventComp.endDate.toJSDate();
 
         // Handle single and multi-day events
-        if ((eventStart >= startDate && eventStart <= endDate) ||
-          (eventEnd >= startDate && eventEnd <= endDate) ||
-          (eventStart <= startDate && eventEnd >= endDate)) {
+        if (
+          (eventStart >= startDate && eventStart <= endDate) || // Event starts within the range
+          (eventEnd >= startDate && eventEnd <= endDate) ||     // Event ends within the range
+          (eventStart <= startDate && eventEnd >= endDate)      // Event spans the entire range
+        ) {
           events.push(eventComp.toString())
         }
       }
