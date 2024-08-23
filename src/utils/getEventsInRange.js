@@ -1,5 +1,7 @@
 import ical from 'ical.js';
 
+// https://weather-in-calendar.com/cal/weather-cal.php?city=Potsdam&units=metric&temperature=low-high
+
 function fixIcalFile(icsContent) {
 
   // START remove X-APPLE-STRUCTURED-LOCATION

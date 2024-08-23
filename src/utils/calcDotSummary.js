@@ -44,6 +44,7 @@ export async function calcDailyDotSummariesForRange({
       calendarData,
       questionTracks,
     });
+    console.log('next day');
   }
 }
 
@@ -57,6 +58,13 @@ export async function calcDotSummary({
   calendarData,
   questionTracks,
 }) {
+  console.log('calcDotSummary')
+
+  function setDotSummaryLoading(cachedDotData, loadingState) {
+    cachedDotData.loading = loadingState;
+    saveToLocalStorageWithZod(dotSummarySchema, localStorageKey, cachedDotData);
+  }
+
   if (!questionTracks || questionTracks.length === 0) {
     console.log('no questions');
     return;
@@ -64,6 +72,20 @@ export async function calcDotSummary({
 
   // preparations
   const localStorageKey = getDotKey(rangeStart, rangeEnd);
+
+
+  // save initial empty data to localStorage
+  let cachedDotData = loadFromLocalStorage(localStorageKey);
+  if (!cachedDotData) {
+    cachedDotData = {
+      rangeStart: new Date(rangeStart).toISOString(),
+      rangeEnd: new Date(rangeEnd).toISOString(),
+    };
+  }
+
+  // set loading to true
+  setDotSummaryLoading(cachedDotData, true);
+
 
   // get all events in range
   const allEventsInRange = getAllEventsInRange(calendarData, rangeStart, rangeEnd)
@@ -93,11 +115,14 @@ export async function calcDotSummary({
   const hashOfLlmPrompt = await getSha512Hash(llmPrompt);
 
   // load data in range from localStorage and check if last hash is the same
-  const cachedDotData = loadFromLocalStorage(localStorageKey);
   if (cachedDotData) {
     if (cachedDotData.hashOfRequest === hashOfLlmPrompt) {
       // Dot data was already calculated.
       // No need to calculate it again.
+
+      // set loading to false
+      setDotSummaryLoading(cachedDotData, true);
+
       // Stop the function here.
       // Return nothing.
       return;
@@ -111,6 +136,10 @@ export async function calcDotSummary({
 
   if (!newDotSummary) {
     console.error('could not get dot-summary');
+
+    // set loading to false
+    setDotSummaryLoading(cachedDotData, true);
+
     return;
   }
 
@@ -119,6 +148,7 @@ export async function calcDotSummary({
     rangeEnd: new Date(rangeEnd).toISOString(),
     hashOfRequest: hashOfLlmPrompt,
     dotSummary: newDotSummary,
+    loading: false,
   };
   saveToLocalStorageWithZod(dotSummarySchema, localStorageKey, newDotData);
   console.log('saved newDotData', newDotData);

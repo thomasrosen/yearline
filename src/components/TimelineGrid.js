@@ -76,7 +76,7 @@ export function TimelineGrid() {
                           const question = questionTrack.question;
 
                           let answer = null
-                          if (dotSummary && dotSummary.dotSummary && dotSummary.dotSummary[question]) {
+                          if (dotSummary && dotSummary.dotSummary && dotSummary.dotSummary !== null && dotSummary.dotSummary[question]) {
                             answer = dotSummary.dotSummary[question];
                           }
                           return (
@@ -89,6 +89,11 @@ export function TimelineGrid() {
 
                       <td>
                         <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+                          {
+                            dotSummary && dotSummary.loading
+                              ? <span>Loading...</span>
+                              : null
+                          }
                           <button
                             className="red"
                             onClick={() => clearCacheForRange(dayRange.rangeStart, dayRange.rangeEnd)}
