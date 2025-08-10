@@ -1,0 +1,263 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//vejnoe.dk//v0.2//EN
+X-WR-CALNAME:Weather for Potsdam
+X-APPLE-CALENDAR-COLOR:#ffffff
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:🌦️ 19°/28°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240817@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240817
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240818
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:🌦️ Moderate rain\n\n🌅 Sunrise 5:54 and sets 20:29\n\n⚡️ Pressure 1012 hPa\n\n💧 Humidity 53%\n\n💨 Wind speed up to 3 m/s\n🚩 from NNW ↓\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:🌦️ 15°/24°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240818@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240818
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240819
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:🌦️ Moderate rain\n\n🌅 Sunrise 5:56 and sets 20:27\n\n⚡️ Pressure 1008 hPa\n\n💧 Humidity 70%\n\n💨 Wind speed up to 3 m/s\n🚩 from NNW ↓\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 13°/23°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240819@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240819
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240820
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Overcast clouds\n\n🌅 Sunrise 5:57 and sets 20:25\n\n⚡️ Pressure 1018 hPa\n\n💧 Humidity 54%\n\n💨 Wind speed up to 3 m/s\n🚩 from NW ↘\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☀️ 14°/27°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240820@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240820
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240821
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☀️ Sky is clear\n\n🌅 Sunrise 5:59 and sets 20:22\n\n⚡️ Pressure 1014 hPa\n\n💧 Humidity 44%\n\n💨 Wind speed up to 2 m/s\n🚩 from SE ↖\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:🌦️ 16°/23°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240821@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240821
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240822
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:🌦️ Light rain\n\n🌅 Sunrise 6:01 and sets 20:20\n\n⚡️ Pressure 1014 hPa\n\n💧 Humidity 51%\n\n💨 Wind speed up to 5 m/s\n🚩 from W →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 12°/23°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240822@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240822
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240823
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Overcast clouds\n\n🌅 Sunrise 6:02 and sets 20:18\n\n⚡️ Pressure 1016 hPa\n\n💧 Humidity 39%\n\n💨 Wind speed up to 4 m/s\n🚩 from SW ↗\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☀️ 14°/30°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240823@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240823
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240824
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☀️ Sky is clear\n\n🌅 Sunrise 6:04 and sets 20:16\n\n⚡️ Pressure 1005 hPa\n\n💧 Humidity 32%\n\n💨 Wind speed up to 7 m/s\n🚩 from SW ↗\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 14°/22°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240824@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240824
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240825
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Overcast clouds\n\n🌅 Sunrise 6:06 and sets 20:14\n\n⚡️ Pressure 1011 hPa\n\n💧 Humidity 35%\n\n💨 Wind speed up to 7 m/s\n🚩 from W →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:🌦️ 13°/20°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240825@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240825
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240826
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:🌦️ Light rain\n\n🌅 Sunrise 6:07 and sets 20:12\n\n⚡️ Pressure 1016 hPa\n\n💧 Humidity 37%\n\n💨 Wind speed up to 8 m/s\n🚩 from W →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 14°/25°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240826@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240826
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240827
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Overcast clouds\n\n🌅 Sunrise 6:09 and sets 20:09\n\n⚡️ Pressure 1014 hPa\n\n💧 Humidity 39%\n\n💨 Wind speed up to 5 m/s\n🚩 from SW ↗\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:🌤️ 14°/21°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240827@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240827
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240828
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:🌤️ Few clouds\n\n🌅 Sunrise 6:11 and sets 20:07\n\n⚡️ Pressure 1009 hPa\n\n💧 Humidity 45%\n\n💨 Wind speed up to 7 m/s\n🚩 from WSW →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 13°/18°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240828@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240828
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240829
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Overcast clouds\n\n🌅 Sunrise 6:12 and sets 20:05\n\n⚡️ Pressure 1018 hPa\n\n💧 Humidity 47%\n\n💨 Wind speed up to 6 m/s\n🚩 from WSW →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 11°/22°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240829@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240829
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240830
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Scattered clouds\n\n🌅 Sunrise 6:14 and sets 20:03\n\n⚡️ Pressure 1020 hPa\n\n💧 Humidity 43%\n\n💨 Wind speed up to 2 m/s\n🚩 from E ←\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 13°/22°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240830@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240830
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240831
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Overcast clouds\n\n🌅 Sunrise 6:16 and sets 20:00\n\n⚡️ Pressure 1015 hPa\n\n💧 Humidity 54%\n\n💨 Wind speed up to 3 m/s\n🚩 from W →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:🌤️ 15°/25°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240831@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240831
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240901
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:🌤️ Few clouds\n\n🌅 Sunrise 6:17 and sets 19:58\n\n⚡️ Pressure 1017 hPa\n\n💧 Humidity 39%\n\n💨 Wind speed up to 3 m/s\n🚩 from WSW →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY;LANGUAGE=en:☁️ 16°/27°
+ 
+X-FUNAMBOL-ALLDAY:1 
+CONTACT:Andreas Vejnø Andersen\, andreas@vejnoe.dk 
+UID:20240901@vejnoe.dk 
+DTSTAMP;VALUE=DATE:20240817T154337
+DTSTART;VALUE=DATE:20240901
+LOCATION:Potsdam
+ 
+X-MICROSOFT-CDO-ALLDAYEVENT:TRUE 
+URL;VALUE=URI:https://www.vejnoe.dk 
+DTEND;VALUE=DATE:20240902
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC 
+DESCRIPTION;LANGUAGE=en:☁️ Overcast clouds\n\n🌅 Sunrise 6:19 and sets 19:56\n\n⚡️ Pressure 1016 hPa\n\n💧 Humidity 45%\n\n💨 Wind speed up to 5 m/s\n🚩 from W →\n\nView full weather report https://openweathermap.org/city/2852458\n\n🙌 Thanks for using Weather in Your Calendar, please consider supporting https://weather-in-calendar.com
+END:VEVENT
+END:VCALENDAR
